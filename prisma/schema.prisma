@@ -1,0 +1,18 @@
+model Product {
+  sku    String   @id @unique
+  title  String
+  stocks Stock[]
+  categories Category[]
+}
+
+model Category {
+  slug     String   @id @unique
+  title    String
+  products Product[]
+}
+
+model Stock {
+  uuid     String   @id @unique
+  title    String
+  products Product[]
+}
